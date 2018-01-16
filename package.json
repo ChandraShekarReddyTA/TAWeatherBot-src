@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apiai": "^4.0.3",
     "botbuilder": "^3.13.1",
     "botbuilder-azure": "^3.0.4",
-    "restify": "^5.0.0"
+    "restify": "^5.0.0",
+    "uniqid": "^4.1.1"
   },
   "devDependencies": {
     "request": "^2.81.0",
