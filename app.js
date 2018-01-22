@@ -12,8 +12,8 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 
 // Create chat connector for communicating with the Bot Framework Service
 var connector = new builder.ChatConnector({
-	appId: '86301fdb-635d-4f00-a1ce-fdb8b94593a1',
-	appPassword: 'daqiCI765}:?dvcQXIJB06}'
+	appId: process.env.MICROSOFT_APP_ID, //'86301fdb-635d-4f00-a1ce-fdb8b94593a1',
+	appPassword: process.env.MICROSOFT_APP_PASSWORD //'daqiCI765}:?dvcQXIJB06}'
 });
 
 // Listen for messages from users 
@@ -34,10 +34,10 @@ var bot = new builder.UniversalBot(connector, function (session) {
 		request.end();
 	});
 	responseFromAPI.then(function(data){
-		if(data="status#getMyStatus#"){
-			session.send(""+session.message.from.name);
+		if(data=="status#getMyStatus#"){
+			
 		}
-		else if(data="status#setMyStatus#"){
+		else if(data=="status#setMyStatus#"){
 			
 		}
 		else{
