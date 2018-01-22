@@ -1,7 +1,7 @@
 var restify = require('restify');
 var builder = require('botbuilder');
 var apiai = require('apiai');
-var app = apiai('1e413c6fee0f47378cc3674561d7267a');
+var app = apiai('f5fb2e712a354ec5907d815dc28b25fc');
 var uniqid = require('uniqid');
 
 // Setup Restify Server
