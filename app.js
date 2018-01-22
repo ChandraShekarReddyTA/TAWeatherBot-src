@@ -34,7 +34,16 @@ var bot = new builder.UniversalBot(connector, function (session) {
 		request.end();
 	});
 	responseFromAPI.then(function(data){
-		session.send(""+data);
+		if(data="status#getMyStatus#"){
+			session.send(""+session.message.from.name);
+		}
+		else if(data="status#setMyStatus#"){
+			
+		}
+		else{
+			session.send(""+data);
+		}
+		
 	});
 
 });
